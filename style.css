@@ -1,5 +1,9 @@
-#meme-image-container{
-    display: block;
+body {
+    background-image: url(imgs/background.jpg);
+    color: rgb(19, 41, 61);
+}
+
+#meme-image-container{    
     width: 300px;
     height: 300px;
     border-style: solid;
@@ -14,7 +18,6 @@
     height: 300px;
     border-width: 1px;    
     position: absolute;
-    /* src:'./images/meme-cachorro.jpg' */
 }
 
 #meme-text{
@@ -28,15 +31,18 @@
     text-shadow: 5px 5px 5px rgb(0, 0, 0);
     font-size: 30px;
     color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 .botao-borda{
     width: 90px;
-    height: 90px;    
+    height: 90px;
+    margin: 5px;
 }
 
 #botoes-borda{
     margin-left: 10px;
+    display: flex;
 }
 
 #water{
@@ -55,9 +61,38 @@
 }
 
 .mini-meme{
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 110px;
     margin-top: 5px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
+    margin: 5px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(150, 154, 151);
+    width: 50%;
+    margin: auto;
+}
+
+#input-container{
+    display: flex;
+    margin: 10px;
+}
+
+#select-foto-container {
+    display: flex;
+    flex-direction: column;    
+}
+
+#images-container {
+    display: flex;
+}
+
+.teste{
+    font-size: 25px;
+    font-weight: bold;
 }
