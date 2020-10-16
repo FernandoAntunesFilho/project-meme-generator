@@ -10,39 +10,47 @@
     
 
 </head>
-<body>    
-    <label id=teste>Texto:</label>
-    <input id="text-input" maxlength="60"></br>
-
-    <label >Foto:</label>
-    <!-- <button >Selecione a foto</button> -->
-    <input id='meme-insert' type="file" accept="image/*" onchange="loadFile(event)">
-    <script>
-        let loadFile=function(event){
-            let output=document.getElementById('meme-image');
-            output.src=URL.createObjectURL(event.target.files[0]);
-            output.onload=function(){
-                URL.revokeObjectURL(output.src);
-            }
-        };
-    </script>
-
-    <div id='meme-image-container'>
-        <img id='meme-image' src=''>
-            <p id='meme-text'>
-                
-            </p>
+<body>
+  <div id='main-container'>
+    <div id='input-container'>
+      <label class='teste'>Texto:</label>
+      <input id="text-input" maxlength="60"></br>
     </div>
+
+    <div id='select-foto-container'>
+      <label class='teste'>Foto:</label>
+      <!-- <button >Selecione a foto</button> -->
+      <input id='meme-insert' type="file" accept="image/*" onchange="loadFile(event)">
+      <script>
+          let loadFile=function(event){
+              let output=document.getElementById('meme-image');
+              output.src=URL.createObjectURL(event.target.files[0]);
+              output.onload=function(){
+                  URL.revokeObjectURL(output.src);
+              }
+          };
+      </script>
+
+      <div id='meme-image-container'>
+          <img id='meme-image' src=''>
+              <p id='meme-text'></p>
+      </div>
+    </div>
+
     <div id='botoes-borda'>
-        <button class='botao-borda' id='water'>Borda1</button>
-        <button class='botao-borda' id='fire'>Borda2</button>
-        <button class='botao-borda' id='earth'>Borda3</button>
+        <button class='botao-borda' id='water'>Borda 1</button>
+        <button class='botao-borda' id='fire'>Borda 2</button>
+        <button class='botao-borda' id='earth'>Borda 3</button>
     </div>
-    <div>
+    <div id='images-container'>
         <img id='meme-1' class="mini-meme">
         <img id='meme-2' class="mini-meme">
         <img id='meme-3' class="mini-meme">
         <img id='meme-4' class="mini-meme">
     </div>
+    <footer id="rodape">
+      <p>Desenvolvido por Fernando Antunes - Projeto Meme Generator - Bloco5</p>
+    </footer>
+  </div>
 </body>
 </html>
